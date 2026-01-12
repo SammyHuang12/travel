@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Noto Sans TC', sans-serif;
-    background-color: var(--bg-soft);
+    background-color: var(--bg-dark-soft);
     color: var(--text-dark);
     line-height: 1.7;
 }
@@ -32,35 +32,29 @@ h3,
     color: var(--primary-color);
 }
 
-/* --- 多層級選單 CSS 強化 --- */
-@media (min-width: 992px) {
-    .dropdown-menu .dropdown-toggle:after {
-        border-top: .3em solid transparent;
-        border-right: 0;
-        border-bottom: .3em solid transparent;
-        border-left: .3em solid;
-        float: right;
-        margin-top: .5em;
-    }
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
 
-    .dropdown-menu {
-        margin: 0;
-        border-radius: 12px;
-        border: none;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
+/* 客製元件 */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-    .dropend:hover>.dropdown-menu {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        margin-left: 0.1rem;
-    }
-
-    .nav-item.dropdown:hover>.dropdown-menu {
-        display: block;
-    }
+.btn-primary-custom:hover {
+    background-color: var(--accent-blue);
+    box-shadow: 0 10px 20px rgba(79, 179, 232, 0.3);
+    color: white;
 }
 
 /* 導覽列 */
@@ -88,16 +82,41 @@ h3,
     transform: translateY(-2px);
 }
 
+main {
+    background: var(--bg-soft);
+}
+
 /* 英雄區 - 活潑明亮 */
-.hero-section {
-    height: 70vh;
-    background: linear-gradient(135deg, rgba(255, 127, 80, 0.1) 0%, rgba(79, 179, 232, 0.1) 100%),
-        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop') center/cover;
+/* Hero */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop') center/cover no-repeat var(--bg-dark-soft);
     display: flex;
     align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.hero-btn,
+.hero-btn:first-child:active {
+    border-color: var(--primary-color);
+    font-weight: 500;
+    border: 2px solid var(--primary-color);
+    color: white;
+}
+
+.hero-btn:hover {
+    background-color: var(--primary-color);
 }
 
 .hero-title {
@@ -131,21 +150,10 @@ h3,
 .country-card {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 30px;
     height: 300px;
     cursor: pointer;
     margin-bottom: 24px;
-}
-
-.country-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s;
-}
-
-.country-card:hover img {
-    transform: scale(1.1);
 }
 
 .country-overlay {
@@ -167,14 +175,14 @@ h3,
     border: none;
     border-radius: 30px;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
     background-color: #fff;
 }
 
-.tour-card:hover {
+/* .tour-card:hover {
     transform: scale(1.03);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .card-img-overlay-top {
     position: absolute;
@@ -187,21 +195,6 @@ h3,
     color: var(--primary-color);
 }
 
-.btn-primary-custom {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-primary-custom:hover {
-    background-color: var(--accent-blue);
-    box-shadow: 0 10px 20px rgba(79, 179, 232, 0.3);
-    color: white;
-}
 
 /* 特色區塊 - 參考 Figma 背景裝飾 */
 .feature-bg {
@@ -228,4 +221,70 @@ footer {
     padding: 80px 0 40px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
+}
+
+
+/* --- swiper --- */
+.swiper .swiper-wrapper {
+    width: 306px;
+}
+
+.swiper~.swiper-prev,
+.swiper~.swiper-next {
+    background: white;
+    color: var(--text-dark);
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.swiper~.swiper-prev:active,
+.swiper~.swiper-next:active {
+    background: var(--primary-color);
+    color: white
+}
+
+.swiper~button:hover {
+    /* z-index: 1000; */
+    background: var(--primary-color);
+    color: white
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    display: none;
+}
+
+/* --- 多層級選單 CSS 強化 --- */
+@media (min-width: 992px) {
+    .dropdown-menu .dropdown-toggle:after {
+        border-top: .3em solid transparent;
+        border-right: 0;
+        border-bottom: .3em solid transparent;
+        border-left: .3em solid;
+        float: right;
+        margin-top: .5em;
+    }
+
+    .dropdown-menu {
+        margin: 0;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .dropend:hover>.dropdown-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-left: 0.1rem;
+    }
+
+    .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+
+    .swiper .swiper-wrapper {
+        width: calc((100% - 24px * 2) / 3);
+    }
 }
