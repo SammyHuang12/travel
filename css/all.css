@@ -89,7 +89,7 @@ main {
 /* 英雄區 - 活潑明亮 */
 /* Hero */
 .hero {
-    height: 90vh;
+    height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
         url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop') center/cover no-repeat var(--bg-dark-soft);
     display: flex;
