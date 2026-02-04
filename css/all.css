@@ -13,6 +13,10 @@
 
 }
 
+.outline {
+    outline: red 1px solid;
+}
+
 body {
     font-family: 'Noto Sans TC', sans-serif;
     background-color: var(--bg-dark-soft);
@@ -61,7 +65,7 @@ h3,
 .navbar {
     padding: 1rem 0;
     background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(15px);
+    /* backdrop-filter: blur(15px); */
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -82,6 +86,13 @@ h3,
     transform: translateY(-2px);
 }
 
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: unset;
+}
+
+
+
 main {
     background: var(--bg-soft);
 }
@@ -89,16 +100,26 @@ main {
 /* 英雄區 - 活潑明亮 */
 /* Hero */
 .hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop') center/cover no-repeat var(--bg-dark-soft);
+    height: 85vh;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop') center/cover no-repeat var(--bg-dark-soft); */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
+        url('../images/banner-desktop.jpg') center/cover no-repeat var(--bg-dark-soft); */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
+}
+
+.hero img {
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
+}
+
+.hero a {
+    position: relative;
+    z-index: 1000;
 }
 
 .hero-content p {
@@ -255,6 +276,22 @@ footer {
 }
 
 /* --- 多層級選單 CSS 強化 --- */
+@media (min-width: 768px) {
+    .slideshow_overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.17;
+        z-index: 2;
+    }
+
+}
+
+
 @media (min-width: 992px) {
     .dropdown-menu .dropdown-toggle:after {
         border-top: .3em solid transparent;
@@ -283,6 +320,22 @@ footer {
     .nav-item.dropdown:hover>.dropdown-menu {
         display: block;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .swiper .swiper-wrapper {
         width: calc((100% - 24px * 2) / 3);
