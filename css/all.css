@@ -110,16 +110,18 @@ main {
     justify-content: center;
     color: white;
     text-align: center;
+    background: var(--bg-soft);
 }
 
-.hero img {
+.hero img,
+.slideshow_overlay::before {
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
 }
 
-.hero a {
-    position: relative;
-    z-index: 1000;
+.hero-content {
+    position: absolute;
+    z-index: 2;
 }
 
 .hero-content p {
@@ -265,7 +267,6 @@ footer {
 }
 
 .swiper~button:hover {
-    /* z-index: 1000; */
     background: var(--primary-color);
     color: white
 }

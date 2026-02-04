@@ -80,7 +80,10 @@
         </div>
     </nav>
     <header class="hero position-relative">
-        <img src="./images/banner-desktop.jpg" alt="" class="w-100 h-100">
+        <picture class="w-100 h-100">
+            <source media="(min-width: 768px)" srcset="./images/banner-desktop.jpg">
+            <img src="./images/banner-sm.jpg" alt="banner logo" class="w-100 h-100">
+        </picture>
         <div class="slideshow_overlay"></div>
         <div class="hero-content container-fluid py-5 position-absolute top-50 start-50 translate-middle">
             <p class="mb-2 text-secondary fw-normal">精心設計的路線，尋找下一次出發的靈感</p>
