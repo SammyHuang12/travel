@@ -202,16 +202,6 @@ main {
     background-color: #fff;
 }
 
-.tour-card .card-body {
-    flex-grow: 1;
-    background: yellowgreen;
-}
-
-/* .tour-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-} */
-
 .card-img-overlay-top {
     position: absolute;
     top: 20px;
