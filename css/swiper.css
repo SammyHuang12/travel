@@ -1,0 +1,63 @@
+/* --- swiper --- */
+.banner-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* pagination 整體位置 */
+.swiper-pagination {
+    bottom: 0;
+}
+
+/* 所有圓點 */
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50px;
+    opacity: 1;
+
+    transition: all 0.3s ease;
+    /* ⭐ 平滑動畫 */
+}
+
+/* 目前啟用的 */
+.swiper-pagination-bullet-active {
+    width: 24px;
+    background: var(--primary-color);
+}
+
+
+.travel-swiper .swiper-wrapper {
+    width: 306px;
+}
+
+.travel-swiper~.swiper-prev,
+.travel-swiper~.swiper-next {
+    background: white;
+    color: var(--text-dark);
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.swiper~.swiper-prev:active,
+.swiper~.swiper-next:active {
+    background: var(--primary-color);
+    color: white
+}
+
+.swiper~button:hover {
+    background: var(--primary-color);
+    color: white
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .travel-swiper .swiper-wrapper {
+        width: calc((100% - 24px * 2) / 3);
+    }
+}

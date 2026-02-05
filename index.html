@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="icon" type="image/png" href="./images/icon.png">
 </head>
 
@@ -80,19 +81,74 @@
         </div>
     </nav>
     <header class="hero position-relative">
-        <picture class="w-100 h-100">
-            <source media="(min-width: 768px)" srcset="./images/banner-desktop.jpg">
-            <img src="./images/banner-sm.jpg" alt="banner logo" class="w-100 h-100">
-        </picture>
-        <div class="slideshow_overlay"></div>
-        <div class="hero-content container-fluid py-5 position-absolute top-50 start-50 translate-middle">
-            <p class="mb-2 text-secondary fw-normal">精心設計的路線，尋找下一次出發的靈感</p>
-            <h1 class="hero-title">捕捉旅途中的<br class="d-sm-block d-md-none"><span class="primary-color">每一刻驚喜</span></h1>
-            <div class="mt-4">
-                <a href="#trips" class="btn p-5 py-3 rounded-pill hero-btn z-3">探索旅程</a>
+        <div class="swiper banner-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="./images/banner.jpg">
+                        <img src="./images/banner-sm.jpg" alt="banner logo" class="w-100 h-100">
+                    </picture>
+                    <div class="slideshow_overlay"></div>
+                    <div class="hero-content container-fluid py-5 position-absolute top-50 start-50 translate-middle">
+                        <p class="mb-2 fw-normal">精心設計的路線，尋找下一次出發的靈感</p>
+                        <h1 class="">捕捉旅途中的<br class="d-sm-block d-md-none"><span class="">每一刻驚喜</span>
+                        </h1>
+                        <div class="mt-4">
+                            <a href="#trips" class="btn p-5 py-3 rounded-pill hero-btn z-3">探索旅程</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/CN-Egypt.jpg">
+                            <img src="./images/CN-Egypt-sm.jpg" alt="banner logo" class="w-100 h-100">
+                        </picture>
+                        <div class="slideshow_overlay"></div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/WechatIMG.jpg">
+                            <img src="./images/WechatIMG-sm.jpg" alt="banner logo" class="w-100 h-100">
+                        </picture>
+                        <div class="slideshow_overlay"></div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/CN-Swiss.jpg">
+                            <img src="./images/CN-Swiss-sm.jpg" alt="banner logo" class="w-100 h-100">
+                        </picture>
+                        <div class="slideshow_overlay"></div>
+                    </a>
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
 
+
+
+
+
+
+        <!-- <div class="w-100 h-100">
+            <picture>
+                <source media="(min-width: 768px)" srcset="./images/banner-desktop.jpg">
+                <img src="./images/banner-sm.jpg" alt="banner logo" class="w-100 h-100">
+            </picture>
+            <div class="slideshow_overlay"></div>
+            <div class="hero-content container-fluid py-5 position-absolute top-50 start-50 translate-middle">
+                <p class="mb-2 text-secondary fw-normal">精心設計的路線，尋找下一次出發的靈感</p>
+                <h1 class="hero-title">捕捉旅途中的<br class="d-sm-block d-md-none"><span class="primary-color">每一刻驚喜</span>
+                </h1>
+                <div class="mt-4">
+                    <a href="#trips" class="btn p-5 py-3 rounded-pill hero-btn z-3">探索旅程</a>
+                </div>
+            </div>
+        </div> -->
     </header>
 
     <main id="trips" class="pt-5">

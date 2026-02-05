@@ -100,7 +100,7 @@ main {
 /* 英雄區 - 活潑明亮 */
 /* Hero */
 .hero {
-    height: 85vh;
+    height: 55vh;
     /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
         url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop') center/cover no-repeat var(--bg-dark-soft); */
     /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
@@ -115,8 +115,8 @@ main {
 
 .hero img,
 .slideshow_overlay::before {
-    border-bottom-left-radius: 80px;
-    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 .hero-content {
@@ -144,7 +144,7 @@ main {
 
 .hero-title {
     font-size: 4rem;
-    color: var(--text-dark);
+    /* color: var(--text-dark); */
     margin-bottom: 20px;
 }
 
@@ -241,38 +241,18 @@ footer {
     border-top-right-radius: 60px;
 }
 
-
-/* --- swiper --- */
-.swiper .swiper-wrapper {
-    width: 306px;
-}
-
-.swiper~.swiper-prev,
-.swiper~.swiper-next {
-    background: white;
-    color: var(--text-dark);
-    border-radius: 15px;
-    opacity: 1;
-}
-
-.swiper~.swiper-prev:active,
-.swiper~.swiper-next:active {
-    background: var(--primary-color);
-    color: white
-}
-
-.swiper~button:hover {
-    background: var(--primary-color);
-    color: white
-}
-
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
-    display: none;
-}
-
 /* --- 多層級選單 CSS 強化 --- */
 @media (min-width: 768px) {
+    .hero {
+        height: 75vh;
+    }
+
+    .hero img,
+    .slideshow_overlay::before {
+        border-bottom-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+    }
+
     .slideshow_overlay::before {
         content: '';
         position: absolute;
@@ -289,6 +269,10 @@ footer {
 
 
 @media (min-width: 992px) {
+    .hero {
+        height: 85vh;
+    }
+
     .dropdown-menu .dropdown-toggle:after {
         border-top: .3em solid transparent;
         border-right: 0;
@@ -315,25 +299,5 @@ footer {
 
     .nav-item.dropdown:hover>.dropdown-menu {
         display: block;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .swiper .swiper-wrapper {
-        width: calc((100% - 24px * 2) / 3);
     }
 }
